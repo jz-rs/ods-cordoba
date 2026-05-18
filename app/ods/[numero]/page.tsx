@@ -73,7 +73,7 @@ export default async function ODSDetailPage({
             }}
           >
             <Link
-              href="/"
+              href="/#ods-cordoba"
               style={{
                 color: "rgba(255,255,255,.6)",
                 textDecoration: "none",
@@ -86,15 +86,17 @@ export default async function ODSDetailPage({
             <span style={{ color: "rgba(255,255,255,.35)", fontSize: "13px" }}>
               ›
             </span>
-            <span
+            <Link
+              href="/#ods-cordoba"
               style={{
                 color: "rgba(255,255,255,.6)",
+                textDecoration: "none",
                 fontSize: "13px",
                 fontWeight: 500,
               }}
             >
               ODS en Córdoba
-            </span>
+            </Link>
             <span style={{ color: "rgba(255,255,255,.35)", fontSize: "13px" }}>
               ›
             </span>
