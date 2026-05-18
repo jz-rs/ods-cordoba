@@ -16,7 +16,6 @@ export default function Home() {
     <>
       <Navbar />
       {/* Botón flotante para ir arriba */}
-      {/* @ts-expect-error Server Component to Client Component */}
       <ScrollToTopButton />
 
       {/* ─── HERO ─── */}
