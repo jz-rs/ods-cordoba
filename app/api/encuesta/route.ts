@@ -7,6 +7,7 @@ export async function GET() {
       SELECT
         -- ODS 4: promedio satisfacción educación (1-10)
         ROUND(AVG(ods4_satisfaccion)::numeric, 1)                                    AS ods4_educacion,
+        ROUND(AVG(ods6_satisfaccion)::numeric, 1)                                    AS ods6_agua,
 
         -- ODS 7: promedio satisfacción energía (1-10)
         ROUND(AVG(ods7_satisfaccion)::numeric, 1)                                    AS ods7_energia,
@@ -49,6 +50,7 @@ export async function POST(req: NextRequest) {
     await sql`
       INSERT INTO encuestas (
         ods4_tecnologia, ods4_satisfaccion, ods4_oportunidades, ods4_razon_no, ods4_interes,
+        ods6_satisfaccion, ods6_apta,
         ods7_renovable, ods7_consciencia, ods7_desafios, ods7_satisfaccion,
         ods11_espacios, ods11_estado, ods11_riesgos, ods11_contenedores,
         ods12_reciclaje, ods12_plasticos, ods12_comercios, ods12_ecoamigable, ods12_razon_no,
@@ -56,6 +58,7 @@ export async function POST(req: NextRequest) {
         ods15_areas_verdes, ods15_flora_fauna, ods15_compromiso
       ) VALUES (
         ${d.ods4_tecnologia}, ${d.ods4_satisfaccion}, ${d.ods4_oportunidades}, ${d.ods4_razon_no}, ${d.ods4_interes},
+        ${d.ods6_satisfaccion}, ${d.ods6_apta},
         ${d.ods7_renovable}, ${d.ods7_consciencia}, ${d.ods7_desafios}, ${d.ods7_satisfaccion},
         ${d.ods11_espacios}, ${d.ods11_estado}, ${d.ods11_riesgos}, ${d.ods11_contenedores},
         ${d.ods12_reciclaje}, ${d.ods12_plasticos}, ${d.ods12_comercios}, ${d.ods12_ecoamigable}, ${d.ods12_razon_no},

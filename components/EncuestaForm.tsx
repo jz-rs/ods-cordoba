@@ -15,6 +15,7 @@ type State = Record<string, string | string[] | number>;
 const INIT: State = {
   ods4_tecnologia: "", ods4_satisfaccion: 5, ods4_oportunidades: "",
   ods4_razon_no: "", ods4_interes: "",
+  ods6_satisfaccion: 5, ods6_apta: "",
   ods7_renovable: "", ods7_consciencia: "", ods7_desafios: "", ods7_satisfaccion: 5,
   ods11_espacios: "", ods11_estado: 5, ods11_riesgos: "", ods11_contenedores: "",
   ods12_reciclaje: [], ods12_plasticos: "", ods12_comercios: "", ods12_ecoamigable: "",
@@ -205,6 +206,18 @@ export default function EncuestaForm() {
         <Pregunta label="¿Está interesado en continuar su educación o recibir formación adicional para mejorar sus perspectivas laborales?">
           <RadioGroup name="ods4_interes" options={["Sí", "No"]}
             value={form.ods4_interes as string} onChange={set("ods4_interes")} />
+        </Pregunta>
+      </Card>
+
+      {/* ODS 6 */}
+      <SeccionHeader num="6" titulo="Agua Limpia y Saneamiento" />
+      <Card>
+        <Pregunta label="Del 1 al 10, ¿cómo calificarías el acceso al agua potable en tu barrio?">
+          <Slider name="ods6_satisfaccion" value={form.ods6_satisfaccion as number} onChange={set("ods6_satisfaccion")} />
+        </Pregunta>
+        <Pregunta label="¿El agua de tu barrio es apta para consumo sin filtrar?">
+          <RadioGroup name="ods6_apta" options={["Sí", "No", "No sé"]}
+            value={form.ods6_apta as string} onChange={set("ods6_apta")} />
         </Pregunta>
       </Card>
 
