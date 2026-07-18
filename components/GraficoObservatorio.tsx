@@ -129,12 +129,16 @@ export default function GraficoObservatorio() {
         </div>
 
         {/* Mobile y desktop: usamos el mismo componente con scroll horizontal */}
-        <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
+        <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch", borderRadius: "10px", border: "1px solid #e2e8f0" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "12px", minWidth: "520px" }}>
             <thead>
-              <tr>
-                <th style={{ padding: "8px 12px", textAlign: "left", fontWeight: 700,
-                  color: "#64748b", borderBottom: "2px solid #e2e8f0", minWidth: "90px" }}>
+              <tr style={{ background: "#f8fafc" }}>
+                <th style={{
+                  padding: "10px 14px", textAlign: "left", fontWeight: 700,
+                  color: "#64748b", borderBottom: "2px solid #e2e8f0",
+                  position: "sticky", left: 0, background: "#f8fafc", zIndex: 2,
+                  boxShadow: "2px 0 4px rgba(0,0,0,.06)", minWidth: "90px", whiteSpace: "nowrap",
+                }}>
                   Zona
                 </th>
                 {ODS_COLS.map(o => (
@@ -154,8 +158,13 @@ export default function GraficoObservatorio() {
             <tbody>
               {ZONAS.map((z, i) => (
                 <tr key={z.zona} style={{ background: i % 2 === 0 ? "white" : "#f8fafc" }}>
-                  <td style={{ padding: "10px 12px", fontWeight: 600, color: "#334155",
-                    borderBottom: "1px solid #f1f5f9", fontSize: "12px" }}>
+                  <td style={{
+                    padding: "10px 14px", fontWeight: 600, color: "#334155",
+                    borderBottom: "1px solid #f1f5f9", fontSize: "12px", whiteSpace: "nowrap",
+                    position: "sticky", left: 0,
+                    background: i % 2 === 0 ? "white" : "#f8fafc", zIndex: 1,
+                    boxShadow: "2px 0 4px rgba(0,0,0,.06)",
+                  }}>
                     {z.zona}
                   </td>
                   {[z.ods4, z.ods6, z.ods7, z.ods11, z.ods12, z.ods13, z.ods15].map((pct, j) => (
