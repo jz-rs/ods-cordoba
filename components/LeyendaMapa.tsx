@@ -2,12 +2,12 @@
 import { useState, useEffect, useCallback } from "react";
 
 const CATEGORIAS = [
-  { label: "Basura / Residuos",            color: "#f97316", emoji: "🗑️" },
-  { label: "Agua contaminada",             color: "#3b82f6", emoji: "💧" },
-  { label: "Tala de árboles",              color: "#22c55e", emoji: "🌳" },
-  { label: "Ruido / Contaminación sonora", color: "#a855f7", emoji: "🔊" },
-  { label: "Aire / Humo",                  color: "#6b7280", emoji: "💨" },
-  { label: "Otro",                         color: "#ef4444", emoji: "⚠️" },
+  { label: "Gestión de Residuos y Economía Circular",        color: "#f97316", emoji: "🗑️" },
+  { label: "Biodiversidad y Arbolado Urbano",                color: "#22c55e", emoji: "🌳" },
+  { label: "Huertas Agroecológicas y Soberanía Alimentaria", color: "#84cc16", emoji: "🥬" },
+  { label: "Energía Limpia y Eficiencia Energética",         color: "#eab308", emoji: "⚡" },
+  { label: "Gestión Responsable del Agua",                   color: "#3b82f6", emoji: "💧" },
+  { label: "Movilidad Sustentable y Espacio Público",        color: "#a855f7", emoji: "🚲" },
 ];
 
 export default function LeyendaMapa() {
