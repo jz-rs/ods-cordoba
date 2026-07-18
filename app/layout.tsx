@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logos/navegador.png",
   },
+    other: {
+    "format-detection": "telephone=no, address=no, email=no",
+  },
 };
 
 export default function RootLayout({
