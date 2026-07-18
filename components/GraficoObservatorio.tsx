@@ -19,7 +19,7 @@ const BARRAS = [
   { key: "ods11_ciudades",    label: "ODS 11\nCiudades",    color: "#fd9d24" },
   { key: "ods12_consumo",     label: "ODS 12\nConsumo",     color: "#bf8b2e" },
   { key: "ods13_clima",       label: "ODS 13\nClima",       color: "#3f7e44" },
-  { key: "ods15_ecosistemas", label: "ODS 15\nEcosistemas", color: "#56c02b" },
+  { key: "ods15_ecosistemas", label: "ODS 15\nEcos.", color: "#56c02b" },
 ];
 
 const ZONAS = [
